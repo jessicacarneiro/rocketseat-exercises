@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript</title>
+</head>
+<body>
+    
+    <script>
+        var nome = "Jéssica"; // string
+
+        // typeof() == number
+        var peso = 53.5; // float
+        var idade = 28; // int
+
+        var humano = true; // boolean
+
+        // typeof() == object
+        var familiares = ["Luiz Filipe", "Luiza Marta", "Juliana", "Antonio Carlos"]; // array
+
+        var marido = {
+            nome: "Marido",
+            idade: 40,
+            peso: 55.1,
+            humano: false
+        }; // object
+
+        const soma = (a, b) => a + b;
+
+        var x = 50, y = 90;
+        
+        console.log(soma);
+        console.log(soma(x, y));
+
+        const retornaSexo = (sexo) => {
+            switch(sexo) {
+                case 'M': return "Masculino";
+                case 'F': return "Feminino";
+                default: return "Outro";
+            }
+        }
+
+        console.log(retornaSexo('M'));
+        console.log(retornaSexo('F'));
+        console.log(retornaSexo('NA'));
+
+        function exibeAlgo() {
+            console.log("Hello, world!");
+        }
+        setInterval(exibeAlgo, 1000);
+
+        function exibeOutraCoisa() { 
+            console.log("Another hello, world!");
+        }
+        setTimeout(exibeOutraCoisa, 5000);
+        
+    </script>
+</body>
+</html>

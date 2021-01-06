@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="buttonDiv">
+        <button id="createBox">Criar uma caixa vermelha</button>
+    </div>
+    <br>
+    <div id="redBoxes">
+    </div>
+    <script>
+        var btnElement = document.querySelector("div#buttonDiv button");
+        var divBoxes = document.querySelector("div#redBoxes");
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function createRedBox() {
+            var redBox = document.createElement("div");
+            redBox.style.width = "100px";
+            redBox.style.height = "100px";
+            redBox.style.backgroundColor = "#f00";
+            redBox.onmouseover = function () {
+                var newColor = getRandomColor();
+                this.style.backgroundColor = newColor;
+            };
+
+            divBoxes.appendChild(redBox);
+        };
+
+        function getRandomColor() {
+ var letters = "0123456789ABCDEF";
+ var color = "#";
+ for (var i = 0; i < 6; i++) {
+ color += letters[Math.floor(Math.random() * 16)];
+ }
+ return color;
+}
+
+        btnElement.onclick = createRedBox;
+
+    </script>
+</body>
+</html>

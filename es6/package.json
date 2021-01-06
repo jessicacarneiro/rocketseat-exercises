@@ -1,0 +1,20 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2"
+  },
+  "scripts": {
+    "mod1ex1": "babel ./mod1/ex1.js -o ./mod1/bundle1.js",
+    "mod1ex2": "babel ./mod1/ex2.js -o ./mod1/bundle2.js",
+    "mod1ex3": "babel ./mod1/ex3.js -o ./mod1/bundle3.js",
+    "mod1ex4": "babel ./mod1/ex4.js -o ./mod1/bundle4.js",
+    "mod1ex5": "babel ./mod1/ex5.js -o ./mod1/bundle5.js",
+    "mod1ex6": "babel ./mod1/ex6.js -o ./mod1/bundle6.js",
+    "mod1ex7": "babel ./mod1/ex7.js -o ./mod1/bundle7.js"
+  }
+}

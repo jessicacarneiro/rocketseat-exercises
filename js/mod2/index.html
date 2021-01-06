@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app1">
+        <button onclick="mostraAlerta()">Me pressione</button>
+    </div>
+    <br>
+    <div id="app2">
+        <input type="text" name="nome" id="nome"/>
+        <button class="botao">Adicionar</button>
+    </div>
+    <br>
+    <div id="app3">
+        <input type="text" />
+    </div>
+    <div id="app4">
+        <div class="box"></div>
+    </div>
+    <script>
+        function mostraAlerta() {
+            alert("O botão foi clicado.");
+        }
+
+        // document.getElementsByClassName("nome")[0] or getElementById("nome") or getElementsByTagName("input")[0]
+        var inputElement = document.querySelector("div#app2 input");
+        // var inputElement = document.querySelector("input[name=nome]"); // returns a single element
+        console.log(inputElement);
+
+        var btnElement = document.querySelector("button.botao");
+        console.log(btnElement);
+
+        btnElement.onclick = function() {
+            var inputValue = inputElement.value;
+            alert("Adicionado " + inputValue);
+        };
+
+        var linkElement = document.createElement("a");
+        linkElement.setAttribute("href", "http://google.com");
+        
+        var textElement = document.createTextNode("Acessar o Google");
+
+        linkElement.appendChild(textElement);
+
+        var containerElement = document.getElementById("app3");
+        containerElement.appendChild(linkElement);
+
+        var inputElement2 = document.querySelector("div#app3 input");
+        containerElement.removeChild(inputElement2);
+
+        var boxElement = document.querySelector(".box");
+        console.log(boxElement);
+        boxElement.style.width = "100px";
+        boxElement.style.height = "100px";
+        boxElement.style.backgroundColor = "#f00";
+    </script>
+</body>
+</html>
